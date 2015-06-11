@@ -17,10 +17,14 @@
 	<select id="findById" resultType="User">
 		select
 		id, name, password
-		from user where id = #{id}
+		from
+		user where id = #{id}
 	</select>
 
 	<update id="update" parameterType="User">
-		update user set name=#{name}, password=#{password} where id = #{id}
+		update user set name=#{name},
+		password=#{password} where id = #{id}
 	</update>
+
+
 </mapper>

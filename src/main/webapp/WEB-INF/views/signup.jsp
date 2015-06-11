@@ -10,24 +10,26 @@
 <body>
 	<div id="Header">사용자 관리</div>
 	<div id="Menu">
-		<a href="list.jsp">목록보기</a><br /> <a href="create.jsp">등록하기</a>
+		<a href="list">목록보기</a><br /> <a href="signup.jeju">등록하기</a>
 	</div>
 	<div id="Content">
-		<form action="create_user" method="post">
+		<form action="signup" method="post">
 			<fieldset>
 				<legend>사용자 등록</legend>
 				<p>
 					<label>아이디</label> <input type="text" name="id" />
 				</p>
 				<p>
-					<label>이름</label> <input type="name" name="name" />
+					<label>이름</label> <input type="text" name="name" />
 				</p>
 				<p>
 					<label>암호</label> <input type="password" name="password" />
 				</p>
-				<p>
-					<input type="submit" value="등록" />
-				</p>
+				<!-- <p>
+					<label>권한</label> <input type="password" name="password" />
+				</p> -->
+
+				<input type="submit" value="회원가입" />
 			</fieldset>
 		</form>
 	</div>
