@@ -29,7 +29,14 @@
 					<tr>
 						<td>${user.id }</td>
 						<td>${user.name }</td>
-						<td><a href="modify?id=${user.id}">수정</a></td>
+						<td>
+							<form action="modify">
+								<input type="hidden" name="id" value="${user.id}" /> <input
+									type="hidden" name="name" value="${user.name}" /> <input
+									type="hidden" name="password" value="${user.password}" /> <input
+									type="submit" value="수정" />
+							</form>
+						</td>
 						<td><a href="remove?id=${user.id}">삭제</a></td>
 					</tr>
 				</c:forEach>

@@ -10,4 +10,6 @@ public interface UserService {
 
 	void insert(User user);
 
+	void update(User user);
+
 }
