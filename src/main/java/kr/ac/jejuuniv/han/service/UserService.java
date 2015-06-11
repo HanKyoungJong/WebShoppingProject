@@ -13,4 +13,6 @@ public interface UserService {
 	void update(User user);
 
 	void delete(String id);
+
+	User findUser(String id);
 }

@@ -17,9 +17,11 @@
 			<col width="8%" />
 			<col width="10%" />
 		</colgroup>
-		<form>
-			<input type="button" onClick="location.href='signup'" value="회원가입">
-			<input type="button" onClick="location.href='login'" value="로그인">
+		<form action="signup">
+			<input type="submit" value="회원가입">
+		</form>
+		<form action="login" method="get">
+			<input type="submit" value="로그인">
 		</form>
 		<thead>
 			<tr>
