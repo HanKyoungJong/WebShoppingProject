@@ -37,7 +37,10 @@
 									type="submit" value="수정" />
 							</form>
 						</td>
-						<td><a href="remove?id=${user.id}">삭제</a></td>
+						<td><form action="delete">
+								<input type="hidden" name="id" value="${user.id}" /> <input
+									type="submit" value="삭제" />
+							</form></td>
 					</tr>
 				</c:forEach>
 			</tbody>
