@@ -16,16 +16,21 @@
 		up static resources in the ${webappRoot}/resources directory -->
 	<resources mapping="/resources/**" location="/resources/" />
 
+
 	<!-- Resolves views selected for rendering by @Controllers to .jsp resources 
 		in the /WEB-INF/views directory -->
+	<beans:bean
+		class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping" />
 	<beans:bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<beans:property name="prefix" value="/WEB-INF/views/" />
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
 
-	<context:component-scan base-package="kr.ac.jejuuniv" />
+	<beans:import resource="repository.xml" />
 
+	<context:component-scan base-package="kr.ac.jejuuniv" />
+	<view-controller path="/**/*.jeju" />
 
 
 </beans:beans>

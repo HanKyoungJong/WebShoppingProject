@@ -1,37 +1,57 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>사용자 등록</title>
-<link href="/menu.css" rel="stylesheet" type="text/css" media="all" />
+<meta charset="utf-8" />
+<title>Simple Login Template | PrepBootstrap</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<link rel="stylesheet" type="text/css"
+	href="resources/loginform/bootstrap/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css"
+	href="resources/loginform/font-awesome/css/font-awesome.min.css" />
+
+<script type="text/javascript"
+	src="resources/loginform/js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript"
+	src="resources/loginform/bootstrap/js/bootstrap.min.js"></script>
 </head>
 <body>
-	<div id="Header">사용자 관리</div>
-	<div id="Menu">
-		<a href="list">목록보기</a><br /> <a href="signup.jeju">등록하기</a>
-	</div>
-	<div id="Content">
-		<form action="signup" method="post">
-			<fieldset>
-				<legend>사용자 등록</legend>
-				<p>
-					<label>아이디</label> <input type="text" name="id" />
-				</p>
-				<p>
-					<label>이름</label> <input type="text" name="name" />
-				</p>
-				<p>
-					<label>암호</label> <input type="password" name="password" />
-				</p>
-				<!-- <p>
-					<label>권한</label> <input type="password" name="password" />
-				</p> -->
 
-				<input type="submit" value="회원가입" />
-			</fieldset>
+	<div class="container">
+
+		<div class="page-header">
+			<h1>SignUp</h1>
+		</div>
+
+		<!-- Simple Login - START -->
+		<form class="col-md-12" action="signup" method="post">
+			<div class="form-group">
+				<input type="text" class="form-control input-lg" placeholder="id"
+					name="id">
+			</div>
+			<div class="form-group">
+				<input type="text" class="form-control input-lg" placeholder="Name"
+					name="name">
+			</div>
+			<div class="form-group">
+				<input type="password" class="form-control input-lg"
+					placeholder="Password" name="password">
+			</div>
+			<div class="form-group">
+				<input type="submit" class="btn btn-primary btn-lg btn-block"
+					value="Sign Up" />
+			</div>
+			<div class="form-group">
+				<span class="pull-right"><a href="login">Login Go</a></span>
+
+			</div>
 		</form>
+		<!-- Simple Login - END -->
+
 	</div>
+
 </body>
 </html>

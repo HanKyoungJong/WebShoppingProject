@@ -9,6 +9,7 @@
 <link href="/menu.css" rel="stylesheet" type="text/css" media="all" />
 </head>
 <body>
+	<jsp:include page="page-module/header.jsp" flush="false" />
 	<div id="Header">사용자 관리</div>
 	<div id="Menu">
 		<a href="list">목록보기</a><br /> <a href="signup.jeju">등록하기</a>
