@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="kr.ac.jejuuniv.dao.cart.UserCartDao">
+	<select id="findUsersProducstByUserId" resultType="Product">
+		select *
+		from
+		jeju.cart uc left outer join jeju.product p
+		on uc.productId = p.id
+		WHERE
+		userId=#{userId}
+	</select>
+	<insert id="insertUsersProduct" parameterType="Product">
+		insert into
+		cart(userId,
+		productId)
+		values(#{userId}, #{productId})
+	</insert>
+	<delete id="deleteUsersProduct">
+		delete
+		from cart
+		where productId = #{productId}
+	</delete>
+</mapper>
+

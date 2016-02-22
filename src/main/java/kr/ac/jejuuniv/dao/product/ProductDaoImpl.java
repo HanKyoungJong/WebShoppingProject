@@ -1,0 +1,53 @@
+package kr.ac.jejuuniv.dao.product;
+
+import java.util.List;
+
+import kr.ac.jejuuniv.model.Product;
+
+import org.apache.ibatis.session.SqlSession;
+import org.springframework.beans.factory.annotation.Autowired;
+
+public class ProductDaoImpl implements ProductDao {
+
+	@Autowired
+	private SqlSession sqlSession;
+
+	public ProductDaoImpl() {
+		super();
+	}
+
+	@Override
+	public Product findProductById(long id) {
+		return sqlSession.<Product> selectOne("findProductById", id);
+	}
+
+	@Override
+	public void insertProduct(Product product) {
+		sqlSession.insert("insertProduct", product);
+	}
+
+	@Override
+	public void deleteProduct(long id) {
+		sqlSession.delete("deleteProduct", id);
+	}
+
+	@Override
+	public List<Product> findAllProducts() {
+		return sqlSession.<Product> selectList("findAllProducts");
+	}
+
+	@Override
+	public Product findLatestProduct() {
+		return sqlSession.selectOne("findLatestProduct");
+	}
+
+	@Override
+	public void updateProduct(Product product) {
+		sqlSession.update("updateProduct", product);
+	}
+
+	@Override
+	public List<Product> findMyProducts(String seller) {
+		return sqlSession.<Product> selectList("findMyProducts", seller);
+	}
+}

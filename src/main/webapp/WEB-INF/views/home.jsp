@@ -7,7 +7,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Anyar-HTML Bootstrap theme</title>
+<title>My OPENMARKET - By HacKoung</title>
 
 <!-- Bootstrap -->
 <link href="resources/css/bootstrap.min.css" rel="stylesheet">
@@ -66,7 +66,8 @@
 			</div>
 		</div>
 	</div>
-
+	<!-- Footer SECTION END-->
+	<jsp:include page="page-module/footer.jsp" flush="false" />
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 	<script src="resources/js/jquery.js"></script>
 	<!-- Include all compiled plugins (below), or include individual files as needed -->

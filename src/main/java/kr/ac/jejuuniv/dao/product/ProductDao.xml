@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="kr.ac.jejuuniv.dao.product.ProductDao">
+	<select id="findAllProducts" resultType="Product">
+		select
+		id,
+		imgPath,uploadImgPath,
+		name,
+		description,
+		price, date, seller
+		from
+		product
+	</select>
+
+	<select id="findMyProducts" parameterType="String" resultType="Product">
+		select
+		id,
+		imgPath,uploadImgPath,
+		name,
+		description, price, date,
+		seller
+		from
+		product
+		where seller =
+		#{seller}
+	</select>
+
+	<insert id="insertProduct" parameterType="Product">
+		insert into
+		product(id,imgPath,uploadImgPath,name,description,price,
+		date,seller)
+		values(#{id},#{imgPath},#{uploadImgPath},#{name},#{description},#{price},#{date},#{seller})
+	</insert>
+
+	<delete id="deleteProduct" parameterType="long">
+		delete
+		from product
+		where id = #{id}
+	</delete>
+
+	<select id="findProductById" resultType="Product">
+		select
+		id,imgPath,uploadImgPath, name,
+		description,
+		price, date, seller
+		from
+		product
+		where
+		id = #{id}
+	</select>
+
+	<select id="findLatestProduct" resultType="Product">
+		select * from product
+		order by date desc limit 1
+	</select>
+
+	<update id="updateProduct" parameterType="Product">
+		update product set
+		id=#{id},
+		imgPath=#{imgPath}, uploadImgPath=#{uploadImgPath},
+		name=#{name},
+		description=#{description}, price=#{price},
+		date=#{date},
+		seller=#{seller} where id = #{id}
+	</update>
+
+</mapper>

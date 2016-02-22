@@ -1,8 +1,8 @@
 package kr.ac.jejuuniv.model;
 
-import kr.ac.jejuuniv.dao.UserDao;
-
 import org.springframework.beans.factory.annotation.Autowired;
+
+import kr.ac.jejuuniv.dao.user.UserDao;
 
 public class User {
 	@Autowired

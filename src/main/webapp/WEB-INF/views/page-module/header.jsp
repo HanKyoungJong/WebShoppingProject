@@ -29,8 +29,9 @@
 								</c:when>
 								<c:otherwise>
 									<li role="presentation"><a href="home">Home</a></li>
-									<li role="presentation"><a href="man">MAN</a></li>
-									<li role="presentation"><a href="woman">WOMAN</a></li>
+									<li role="presentation"><a href="productList">ProductList</a></li>
+									<li role="presentation"><a href="cart">MyCart</a></li>
+									<li role="presentation"><a href="uploadList">MyUploadList</a></li>
 									<li role="presentation"><a href="contact">Contact</a></li>
 									<li role="presentation"><a href="logout">Logout</a></li>
 									<li role="presentation"><a href="list">list</a></li>

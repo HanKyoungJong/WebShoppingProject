@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="utf-8" />
-<title>Simple Login Template | PrepBootstrap</title>
+<title>My OPENMARKET - By HacKoung</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 <link rel="stylesheet" type="text/css"
@@ -39,13 +39,16 @@
 			<div class="form-group">
 				<input type="submit" name="submit"
 					class="btn btn-primary btn-lg btn-block" value="Login" /> <span><a
-					href="#">Need help?</a></span> <span class="pull-right"><a href="#">New
-						Registration</a></span>
+					href="lost">Reset your password</a></span>
+			</div>
+			<div>
+				<span><a href="signup">Create New ID</a></span>
 			</div>
 		</form>
-		<!-- Simple Login - END -->
 
 	</div>
+	<!-- Footer SECTION END-->
+	<jsp:include page="page-module/footer.jsp" flush="false" />
 
 </body>
 </html>

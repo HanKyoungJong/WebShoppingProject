@@ -83,7 +83,7 @@ a:hover {
 ============================ */
 .navigation  {
 	background-color:#fff;
-	padding:0;
+	padding-bottom:15px;
 }
 
 .navbar-brand h1 {
@@ -144,9 +144,9 @@ a:hover {
 ============================ */
 .slider {
   position: relative;
-  padding:50px;
   background:#f8f8f8;
-  padding-top:130px;
+  padding-top:100px;
+  padding-bottom:100px;
 }
 
 #carousel-slider {
@@ -354,7 +354,6 @@ a.accordion-toggle  i{
 }
 
 #contact {
-	background:#f6f6f6;
 	padding:100px;	
 }
 

@@ -39,8 +39,8 @@ public class Login {
 	}
 
 	@RequestMapping(method = RequestMethod.POST)
-	public ModelAndView loginSubmit(@ModelAttribute User user,
-			RedirectAttributes redirectAttributes, HttpSession session) {
+	public ModelAndView loginSubmit(@ModelAttribute User user, RedirectAttributes redirectAttributes,
+			HttpSession session) {
 		ModelAndView model = new ModelAndView();
 
 		String viewName = null;

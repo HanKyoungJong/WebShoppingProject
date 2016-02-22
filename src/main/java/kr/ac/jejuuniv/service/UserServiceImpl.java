@@ -2,7 +2,7 @@ package kr.ac.jejuuniv.service;
 
 import java.util.List;
 
-import kr.ac.jejuuniv.dao.UserDao;
+import kr.ac.jejuuniv.dao.user.UserDao;
 import kr.ac.jejuuniv.model.User;
 
 import org.springframework.beans.factory.annotation.Autowired;
